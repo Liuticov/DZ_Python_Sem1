@@ -13,7 +13,7 @@ Output: 120
 number = int(input('Введите число: '))
 factorial = number
 
-for i in range(1, number):
+for i in range(2, number):
     factorial = factorial * i
 
 print(factorial)
