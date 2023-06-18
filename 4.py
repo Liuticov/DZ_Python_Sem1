@@ -7,17 +7,18 @@
 Input: 5
 Output: 6 
 """
-element_number = int(input('Enter your number: '))
-count = 0
-#Fn = Fn-1 + Fn-2
-f1 = f2 = 1
+fibonachi_number = int(input("Введите число из последовательности фибоначи "))
+positiv_check = bool(fibonachi_number > 0)
+if positiv_check:
+        first_number = 1
+        second_number = 1
+        curent_number = first_number + second_number
+        count = 3
+        while first_number < fibonachi_number:
+            second_number = first_number
+            first_number = curent_number
+            curent_number = first_number + second_number
+            count += 1
 
-while ((f1 + f2)< element_number):
-    f1, f2 = f2, f1 + f2
-    #temp = f1
-    #f1 = f2
-    #f2 = temp + f2
-    count +=1
-    if (f2 == element_number):
-        print(count)
-print('Ваше число неявляется числом Фибоначчи')
+        print("Число {} является {} в последовательности фибоначи ".format(
+                fibonachi_number, count))
