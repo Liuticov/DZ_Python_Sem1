@@ -5,21 +5,18 @@
 чтобы все монетки были повернуты
 вверх одной и той же стороной. Выведите минимальное количество монет,
  которые нужно перевернуть.
-5 -> 1 0 1 1 0
-2
 """
 
-N = int(input("Введите количество монет "))
-gerb = reshka = 0
-for i in range(N):
-    x = int(input("герб(1) или решка(0)? "))
-    if x == 1:
-        gerb += 1
-    else:
-        reshka += 1
-if gerb < reshka:
-    print (f" {gerb} ")
-elif gerb == reshka:
-    print (f" {gerb} ")
+n = int(input())
+count_zero = 0
+count_one = 0
+for i in range(n):
+    x = int(input())
+if x == 0:
+     count_zero += 1
 else:
-    print (f" {reshka} ")
+    count_one += 1
+if count_one > count_zero:
+     print(count_zero)
+else:
+    print(count_one)
